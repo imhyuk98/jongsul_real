@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경남대학교 주차관리 시스템</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 여기에 필요한 다른 스타일시트를 추가할 수 있습니다. -->
+    <style>
+        /* 여기에 스타일을 직접 작성 */
+        h1 img {
+            width: 150px;
+            /* 원하는 가로 크기로 조절 */
+            height: auto;
+            position: relative;
+            top: 40px;
+            /* 자동으로 세로 크기 조절 */
+        }
+
+        h1 {
+            font-size: 75px;
+            font-weight: bold;
+            margin-top: -50px;
+            /* 원하는 크기로 조절 */
+            /* 다른 스타일 속성을 추가하거나 조절할 수 있습니다. */
+        }
+
+        .navbar {
+            background-color: #e3f2fd;
+        }
+
+        .navbar a {
+            color: #000;
+            font-size: 20px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: #007bff;
+        }
+
+        /* 필요한 다른 스타일을 추가할 수 있습니다. */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <%-include('header.ejs')%>
+
+        홈페이지에 오신걸 환영합니다
+
+        <h1><img src="/logo.png">경남대학교 - 장애인 주차관리 시스템</h1>
+
+        <%-include('footer.ejs')%>
+</body>
+
+</html>

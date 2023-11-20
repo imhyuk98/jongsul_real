@@ -1,0 +1,122 @@
+<%-include('header.ejs')%>
+
+    <section class="section section--visual">
+        <div class="inner">
+
+            <div class="summary">
+                <h2 class="summary__title">장애인&nbsp;주차&nbsp;관리</h2>
+                <p class="summary__description"> 장애인 주차구역 침범 및 남용 문제를 예방할 수 있으며 장애인들이
+                    보다 더 편하게 사용할 수 있는 시스템이 필요하다고 느낌</p>
+            </div>
+
+            <form id="sign-form" method="post" action="/loginProc">
+                <% if(user_id){ %>
+
+                    <%=name%>님 환영합니다.&nbsp&nbsp&nbsp&nbsp <div class="btn-group">
+                            <a class="btn logout" href="/logout">Logout</a>
+                        </div>
+
+                        <% } else { %>
+                            <ul>
+                                <li><input class="input--text" type="text" name="user_id" placeholder="User ID"></li>
+                                <li><input class="input--text" type="password" name="pw" placeholder="Password">
+                                    <p class="caption">Use at least one letter, one numeral, and seven characters.</p>
+                                </li>
+                                <li>
+                                    <button class="btn btn--primary" type="submit">Sign in</button>
+                                    <p class="caption">By clicking "Sign up for GitHub", you agree to our terms of
+                                        service and
+                                        privacy policy.
+                                        We'll occasionally send you account related emails.</p>
+                                </li>
+                            </ul>
+                            <% } %>
+            </form>
+
+        </div>
+    </section>
+
+    <!--FEATURE-->
+    <section class="section section--feature">
+
+        <div class="summary">
+            <h2 class="summary__title">개발 동기 / 범위</h2>
+            <p class="summary__description">장애인 주차구역 침범 및 남용 문제를 예방할 수 있으며 장애인들이
+                보다 더 편하게 사용할 수 있는 시스템이 필요하다고 느낌.</p>
+        </div>
+
+        <div class="video">
+            <div class="video-ratio">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TU-O2e1ll10?si=vJq-E5kOIH8i-4UK"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="tiles">
+            <div class="inner">
+
+                <ul class="clearfix">
+                    <li>
+                        <img src="img/feature-tile__platform.png" alt="platform">
+                        <h3>장애인 차량 인식</h3>
+                        <p>RFID를 이용하여 장애인을 인식해 주차 자리에 설치된 차단기 해제 기능을 개발.</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__projects.png" alt="projects">
+                        <h3>장애인 차량 주차 여부 확인</h3>
+                        <p>초음파 센서를 이용하여 차량의 주차 여부를 확인하는 기능을 개발.</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__work.png" alt="work">
+                        <h3>주차장 입구 빈자리 확인</h3>
+                        <p>7-SEG를 통해 주차장 입구에서도 자리를 확인할 수 있도록 개발.</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__build.png" alt="build">
+                        <h3>미리 빈자리 확인</h3>
+                        <p>웹 또는 앱을 이용하여 자리 유무를 사전에 확인할 수 있도록 개발. </p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--WHERE IS-->
+    <section class="section section--where-is">
+        <div class="inner">
+
+            <div class="summary">
+                <h2 class="summary__title">Where is GitHub?</h2>
+                <p class="summary__description">GitHub is where people build software. More than 18 million people use
+                    GitHub
+                    to
+                    discover, fork, and contribute to over 48 million projects.</p>
+            </div>
+
+            <div id="map"></div>
+
+        </div>
+    </section>
+
+    <!--PRICING CARD-->
+    <section class="section section--pricing">
+        <div class="inner">
+
+            <div class="card">
+                <div class="cell cell1">
+                    <a class="btn btn--primary" href="#">Sign up for GitHub</a>
+                </div>
+                <div class="cell cell2">
+                    Public projects are always free. Work together across unlimited private repositories for $7 / month.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <%-include('footer.ejs')%>

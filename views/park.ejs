@@ -1,0 +1,74 @@
+<%-include('header.ejs')%>
+
+    <body>
+        <style>
+            /* 여기에 스타일을 직접 작성 */
+            table {
+                border-collapse: collapse;
+                width: 80%;
+                margin: auto;
+            }
+
+            th {
+                width: 50px;
+                height: 80px;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+                border: 12px solid #fff;
+                /* 수정된 부분 */
+            }
+
+            td {
+                width: 50px;
+                height: 500px;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+                border: 12px solid #fff;
+                /* 수정된 부분 */
+            }
+
+            .available {
+                background-color: #5bc0de;
+                /* Blue */
+            }
+
+            .occupied {
+                background-color: #d9534f;
+                /* Red */
+            }
+
+            img {
+                max-width: 200px;
+                max-height: 200px;
+            }
+        </style>
+        <table border=1>
+            <tr>
+                <th style="background-color: #0080ff;"> 장애인 구역 1</th>
+                <th style="background-color: #000"> 일반 구역 1</th>
+                <th style="background-color: #000"> 일반 구역 2</th>
+                <th style="background-color: #0080ff;"> 장애인 구역 2</th>
+            </tr>
+
+            <% lists.forEach(function(item){ %>
+                <tr>
+                    <td style="background-color: #0080ff;">
+                        <%=item.area_1%>
+                    </td>
+                    <td style="background-color: #000">
+                        <%=item.area_2%>
+                    </td>
+                    <td style="background-color: #000">
+                        <%=item.area_3%>
+                    </td>
+                    <td style="background-color: #0080ff;">
+                        <%=item.area_4%>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+    </body>
+
+    <%-include('footer.ejs')%>
